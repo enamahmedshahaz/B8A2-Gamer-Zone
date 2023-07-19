@@ -4,6 +4,7 @@
 
 
 /* Shared Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@
 }
 
 .btn-primary {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 21px 40px;
     border-radius: 48px;
@@ -32,7 +33,7 @@
 
 .title {
     color: #0B0223;
-    font-size: 45px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -42,10 +43,8 @@
 }
 
 nav {
-
     width: 100%;
     height: 130px;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -54,7 +53,6 @@ nav {
 nav ul {
     display: flex;
     gap: 50px;
-
 }
 
 nav li {
@@ -78,51 +76,53 @@ nav li a {
 
 .banner-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px dotted red;
+    gap: 50px;
     width: auto;
     height: 400px;
+    justify-content: left;
+    align-items: center;
+    /* border: 2px dotted green; */
+}
+
+.banner-container li{
+    list-style: none;
+}
+
+.banner-title-container {
+    background-image: url("../images/Group\ 14.png");
+    background-size: 100% 100%;
+    /* border: 2px dotted red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.banner-btns-container{
+    margin-top: 15px;
+}
+
+
+.banner-img {
+    height: 100%;
+    /* border: 2px dotted #4EC5F7; */
 }
 
 .banner-title {
-    background-image: url("../images/Group\ 14.png");
-    border: 2px dotted red;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    
-}
-
-.banner-photo {
-    margin: 20px auto;
-    border: 2px dotted red;
-    height: 100%;
-    width: 40%;
-}
-
-.banner-img {
-   height: 100%;
-}
-
-.banner-item-title {
     color: #0B0223;
-    font-size: 48px;
+    font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.banner-item-goat {
-    font-size: 95px;
+.banner-goat {
+    font-size: 5.5rem;
     font-weight: 800;
     color: #F948B2
 }
 
-.btn-blue{
+.btn-blue {
     margin-left: 20px;
     background-color: #4EC5F7;
 }
@@ -131,15 +131,57 @@ nav li a {
 
 @media screen and (max-width: 576px) {
 
-    nav{
+    nav {
         flex-direction: column;
+        height: 250px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .banner-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        background-size: 850px 650px;
+        height: auto;
+        gap: 10px;
     }
+    .banner-img {
+        width: 60%;
+    }
+
+    
+    .banner-title-container{
+        width: 80%;
+    }
+    .btn-blue {
+        margin-left: 0px;
+    }
+
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
 
+    nav {
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .btn-blue {
+        margin-left: 0px;
+    }
+
+    .banner-img {
+        width: 40%;
+    }
+
+}
+
+
+
+.hide {
+    display: none;
 }
